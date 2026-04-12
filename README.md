@@ -47,9 +47,25 @@ Puis exécutez :
 `./printf_test`
 
 ## ✔️ Exemple d'utilisation
-Le fichier [main.c](./main.c) inclus permet de tester tous les spécificateurs implémentés.
 
-Il compare systématiquement le comportement de _printf avec celui du vrai printf.
+Voici un exemple simple de l'utilisation de la fonction `_printf` :
+
+```c
+#include "main.h"
+
+int main(void)
+{
+    int len;
+
+    len = _printf("Holberton School est à %s depuis %d ans !\n", "Bordeaux", 5);
+    _printf("Caractères affichés : %d\n", len);
+
+    return (0);
+}
+```
+
+Le fichier [main.c](./main.c) inclus avec le projet permet de compiler et tester tous nos cas d'usage de manière automatisée.
+Il compare systématiquement le comportement de notre `_printf` avec celui du vrai `printf`.
 
 Voici quelques tests effectués dans main.c :
 - Test de phrases simples
